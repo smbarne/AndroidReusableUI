@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LoadingBananaPeel</string>
+
+    <string name="banana_peel_default_empty_message">Uh oh, don\'t slip!  It looks like there isn\'t any content to show yet.</string>
+
+    <string name="action_about">About</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
