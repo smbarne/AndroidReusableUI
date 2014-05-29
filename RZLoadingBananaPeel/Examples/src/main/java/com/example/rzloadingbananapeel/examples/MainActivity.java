@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.raizlabs.loadingbananapeel.LoadingBananaPeelView;
 
@@ -61,6 +62,18 @@ public class MainActivity extends Activity {
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             mLoadingBananaPeelView = (LoadingBananaPeelView)rootView.findViewById(R.id.fragment_content_loading_view);
 
+            // Configure the banana peel empty state message, image, and click state
+            mLoadingBananaPeelView.setBananaPeel(R.string.banana_peel_default_empty_message, R.drawable.ic_bananapeel_default, new LoadingBananaPeelView.BananaPeelActionListener() {
+                @Override
+                public void onBananaPeelClick() {
+                    Toast.makeText(getActivity(), "Clicked Bananana Peel!", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+            // Configure the content view
+            mLoadingBananaPeelView.setContentView(R.layout.view_example_content);
+
+            // Arbitrary flip between states
             mLoadingBananaPeelView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -80,6 +93,7 @@ public class MainActivity extends Activity {
             super.onViewCreated(view, savedInstanceState);
             mLoadingBananaPeelView.showLoading();
 
+            // Simulate network delay
             pseudoContentDelay.schedule(new TimerTask() {
                 @Override
                 public void run() {

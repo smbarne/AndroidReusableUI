@@ -6,9 +6,6 @@
     android:layout_margin="10dp"
     android:background="@drawable/card_filled" >
 
-    <!-- TODO: Asset and Padding consistency -->
-    <!-- TODO: Check the xmlns -->
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,13 +27,6 @@
             android:textColor="@android:color/tertiary_text_light"
             android:textSize="20sp"
         />
-
-        <!--android:layout_marginBottom="@dimen/Padding.Gigantic"-->
-        <!--android:layout_marginLeft="@dimen/Padding.Gigantic"-->
-        <!--android:layout_marginRight="@dimen/Padding.Gigantic"-->
-        <!--android:layout_marginTop="@dimen/Padding.Gigantic"-->
-        <!--android:textColor="@color/TextColor.Light"-->
-        <!--android:textSize="@dimen/TextSize.Gigantic" />-->
     </LinearLayout>
 
 </FrameLayout>
