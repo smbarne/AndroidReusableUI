@@ -123,6 +123,7 @@ public class LoadingBananaPeelView extends ViewFlipper {
         }
 
         cacheViewIndices();
+        showLoading();
     }
 
     /**
