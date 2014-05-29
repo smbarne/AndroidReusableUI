@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.example.rzloadingbananapeel.examples.R;
 import com.raizlabs.baseutils.ThreadingUtils;
 
 /**
@@ -72,8 +73,8 @@ public class LoadingBananaPeelView extends ViewFlipper {
             bananaPeelDefaultImageResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelDefaultImageResource, 0);
 
             // Set the default animations for changing between View Flipper children
-            this.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
-            this.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_out));
+//            this.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
+//            this.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_out));
 
             styledAttributes.recycle();
         }
