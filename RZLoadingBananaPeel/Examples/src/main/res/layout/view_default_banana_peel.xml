@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center"
     android:layout_margin="10dp"
-    android:background="@drawable/card_filled" >
+    android:background="@android:color/white" >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -24,8 +24,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="@android:color/tertiary_text_light"
-            android:textSize="20sp"
         />
     </LinearLayout>
 
