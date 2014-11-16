@@ -3,7 +3,4 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragment_content_loading_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:bananaPeelDefaultImageResource="@drawable/ic_bananapeel_default"
-    app:bananaPeelDefaultMessageStringResource="@string/banana_peel_default_empty_message"
-    app:bananaPeelContentViewLayoutResource="@layout/view_example_content" />
+    android:layout_height="match_parent" />

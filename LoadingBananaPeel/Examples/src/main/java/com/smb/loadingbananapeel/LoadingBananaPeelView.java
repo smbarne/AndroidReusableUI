@@ -33,8 +33,6 @@ public class LoadingBananaPeelView extends ViewFlipper {
     }
 
     private int indexLoading, indexContentView, indexBananaPeel;
-    private int bananaPeelContentViewLayoutResourceId, bananaPeelViewResourceId, bananaPeelDefaultMessageResourceId, bananaPeelDefaultImageResourceId;
-    private boolean hadAttrs;
 
     private View contentView;
     public View getContentView() { return contentView; }
@@ -61,63 +59,25 @@ public class LoadingBananaPeelView extends ViewFlipper {
     }
 
     private void init(Context context, AttributeSet attrs) {
-        hadAttrs = (attrs != null);
-        if (attrs != null) {
-            TypedArray styledAttributes = getContext().getApplicationContext().obtainStyledAttributes(attrs, R.styleable.LoadingBananaPeelView);
-
-            // Load the resource IDs for each property from the styled attributes set
-            bananaPeelContentViewLayoutResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelContentViewLayoutResource, 0);
-            bananaPeelViewResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelViewResource, 0);
-            bananaPeelDefaultMessageResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelDefaultMessageStringResource, 0);
-            bananaPeelDefaultImageResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelDefaultImageResource, 0);
-
-            // Set the default animations for changing between View Flipper children
-            this.setAnimateFirstView(false);
-            this.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
-            this.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_out));
-
-            styledAttributes.recycle();
-        }
     }
 
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        boolean customContentViewLoaded = (contentView != null);
+        if (getChildCount() == 1) {
+            contentView = getChildAt(0);
+        }
 
         if (!isInEditMode()) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             loadingView = inflater.inflate(R.layout.view_loading_view_progress_view, this, false);
         }
 
-        if (!customContentViewLoaded) {
-            // See if a custom content view has been specified, and if so, inflate this view and set the
-            // contentView reference.
-            if (setContentView(bananaPeelContentViewLayoutResourceId) == null) {
-                setContentView(R.layout.view_loading_view_default_content_view);
-            }
-        }
-
+        setContentView(R.layout.view_loading_view_default_content_view);
         setLoadingView(loadingView);
 
-        if (hadAttrs) {
-            // See if a custom banana peel view has been specified, and if so, inflate this view and set the
-            // contentView reference.
-            if (bananaPeelViewResourceId != 0) {
-                bananaPeelView = inflateAndAddResource(bananaPeelViewResourceId);
-            } else {
-                // If no custom banana peel view was specified, load the default banana peel view and set any
-                // default values for the default banana peel that were specified in the attributes
-                bananaPeelView = inflateAndAddResource(R.layout.view_default_banana_peel);
-
-                setBananaPeelMessage(bananaPeelDefaultMessageResourceId);
-                setBananaPeelImage(bananaPeelDefaultImageResourceId);
-            }
-        } else {
-            // If no custom attributes are given, load the default banana peel view
-            bananaPeelView = inflateAndAddResource(R.layout.view_default_banana_peel);
-        }
+        bananaPeelView = inflateAndAddResource(R.layout.view_default_banana_peel);
 
         cacheViewIndices();
         showLoading();
