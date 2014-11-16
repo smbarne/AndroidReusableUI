@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.smb.examples.loadingbananapeel.R;
+
 /**
  * A class that extends Loading List with a third state for a banana peel.  The
  * banana peel may be a custom layout, or a card view with a given title and
