@@ -65,10 +65,6 @@ public class LoadingBananaPeelView extends ViewFlipper {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        if (getChildCount() == 1) {
-            contentView = getChildAt(0);
-        }
-
         if (!isInEditMode()) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             loadingView = inflater.inflate(R.layout.view_loading_view_progress_view, this, false);
