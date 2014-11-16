@@ -9,12 +9,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.rzloadingbananapeel.examples.R;
+import com.smb.examples.loadingbananapeel.R;
 import com.smb.loadingbananapeel.LoadingBananaPeelView;
 
 import java.util.Timer;
 import java.util.TimerTask;
-
 
 public class MainActivity extends ActionBarActivity {
 

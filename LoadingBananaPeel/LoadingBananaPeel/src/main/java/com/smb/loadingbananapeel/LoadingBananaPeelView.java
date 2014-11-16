@@ -81,10 +81,6 @@ public class LoadingBananaPeelView extends ViewFlipper {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        if (getChildCount() == 1) {
-            contentView = getChildAt(0);
-        }
-
         boolean customContentViewLoaded = (contentView != null);
 
         if (!isInEditMode()) {
