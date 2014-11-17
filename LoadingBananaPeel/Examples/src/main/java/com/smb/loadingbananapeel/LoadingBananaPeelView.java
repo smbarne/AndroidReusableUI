@@ -60,6 +60,7 @@ public class LoadingBananaPeelView extends ViewFlipper {
 
     private void init(Context context, AttributeSet attrs) {
         // Set the default animations for changing between View Flipper children
+        this.setAnimateFirstView(false);
         this.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
         this.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_out));
     }
