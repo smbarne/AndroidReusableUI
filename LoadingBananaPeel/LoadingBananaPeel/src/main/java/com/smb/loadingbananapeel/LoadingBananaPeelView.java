@@ -70,6 +70,7 @@ public class LoadingBananaPeelView extends ViewFlipper {
             bananaPeelDefaultImageResourceId = styledAttributes.getResourceId(R.styleable.LoadingBananaPeelView_bananaPeelDefaultImageResource, 0);
 
             // Set the default animations for changing between View Flipper children
+            this.setAnimateFirstView(false);
             this.setInAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_in));
             this.setOutAnimation(AnimationUtils.loadAnimation(context, R.anim.abc_fade_out));
 
