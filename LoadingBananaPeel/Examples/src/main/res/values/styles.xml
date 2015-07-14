@@ -5,9 +5,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar" >
 
-        <item name="colorPrimary">@color/Material.Blue</item>
-        <item name="colorPrimaryDark">@color/Material.Blue.Dark</item>
-        <item name="colorAccent">@color/Material.Blue.Accent</item>
+        <item name="colorPrimary">@color/Material.Red</item>
+        <item name="colorPrimaryDark">@color/Material.Red.Dark</item>
+        <item name="colorAccent">@color/Material.Red.Accent</item>
         <item name="android:textColorPrimary">@color/Material.White</item>
 
     </style>
