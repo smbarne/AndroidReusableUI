@@ -21,16 +21,13 @@
             android:id="@+id/bananaPeel_ImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="Banana Peel: Empty State"
-            android:tint="?android:colorPrimary"/>
+            android:contentDescription="Banana Peel: Empty State" />
 
         <TextView
             android:id="@+id/bananaPeel_TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="?android:attr/colorPrimary"
-            android:textSize="20sp"
         />
 
     </LinearLayout>

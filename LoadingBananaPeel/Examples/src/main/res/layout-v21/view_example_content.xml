@@ -10,7 +10,5 @@
         android:text="Successfully Showed the Content View!"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:textColor="?android:attr/colorPrimary"
-        android:textSize="26sp"
         />
 </RelativeLayout>
